@@ -152,7 +152,7 @@
         + currentGen[(size+x+1) % size][y]
         + currentGen[(size+x+1) % size][(size+y+1) % size];
 
-        return ((currentGen[x][y] && (neighbors == 2 || neighbors == 3)) || (!currentGen[x][y] && neighbors == 3)) ? 1 : 0;
+        return (currentGen[x][y] && (neighbors == 2 || neighbors == 3)) || (!currentGen[x][y] && neighbors == 3);
       }
 
       // game of life: calculate the next generation
